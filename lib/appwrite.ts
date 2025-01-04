@@ -45,9 +45,6 @@ export const login = async () => {
 
     if (!secret || !userId) throw new Error("Failed to login");
 
-    console.log("secret", secret);
-    console.log("userId", userId);
-
     const session = await account.createSession(userId, secret);
 
     if (!session) throw new Error("Failed to create a session");
